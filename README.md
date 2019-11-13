@@ -55,3 +55,7 @@ For testing purpose, a dummy webhook handler is created at route `/webhookHandle
 
 You can create custom webhook receiving endpoints or use a single endpoint and hadle it with custom implementation.
 Modify the code at `./webhookHandler.js`  
+
+---
+
+The demo server is hosted at https://be-sandbox-demo.herokuapp.com
