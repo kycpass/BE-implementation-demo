@@ -7,4 +7,7 @@ const processWebhook = (data) => {
   return webhookRespCache
 }
 
-module.exports = processWebhook;
+module.exports = {
+  processWebhook,
+  webhookRespCache
+};
