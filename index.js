@@ -1,12 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const http = require('http');
+const cors = require('cors')
 const entifyme = require('./entifyme');
 const processWebhook = require('./webhookHandler');
 
 let app = express();
 app.server = http.createServer(app);
 app.use(bodyParser.json());
+app.use(cors())
 
 app.get('/', (req, res) => {
 	res.send('Demo implementation of Entifyme integration');
