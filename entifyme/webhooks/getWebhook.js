@@ -7,7 +7,7 @@ const getWebhookList = async ()=>{
       path: "webhooks"
     });
     return hooks.data;
-  }catch(err) {
+  }catch(err) {    
     return (err.response && err.response.data) || "Something went wrong!";
   }
 }

@@ -4,6 +4,7 @@
   "description": "Demo to demonstrate the webhook and jwt token generation",
   "main": "index",
   "scripts": {
+    "start": "node index.js",
     "dev": "nodemon -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
