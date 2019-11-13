@@ -56,6 +56,9 @@ For testing purpose, a dummy webhook handler is created at route `/webhookHandle
 You can create custom webhook receiving endpoints or use a single endpoint and hadle it with custom implementation.
 Modify the code at `./webhookHandler.js`  
 
+#### Test locally:  
+As a secure endpoint is required to create webhook and receive incoming payload, you can use https://ngrok.com/ to create tunneling. It'll provide you a secure (https) url which will be accessible form the public internet.  
+
 ---
 
 The demo server is hosted at https://be-sandbox-demo.herokuapp.com
