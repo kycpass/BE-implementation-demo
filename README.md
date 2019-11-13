@@ -4,7 +4,7 @@ This is a nodejs/express server implementation to demonstrate API/Webhook integr
 ## Installation  
 Before you start make sure that you have requested API Token from support@entifyme.com  
 1. Run `npm install`  
-2. Create a `.env` file in your root directory and configure API_TOKEN and API_ENDPOINT.(Look at `.env.example`)
+2. Create a `.env` file in your root directory and configure `API_TOKEN` and `API_ENDPOINT`.(Look at `.env.example`)
 In this project we are using `dotenv` package to handle environmental variables. [More](https://www.npmjs.com/package/dotenv)
 3. Start the service with `node index.js`  
 
@@ -13,7 +13,7 @@ In this project we are using `dotenv` package to handle environmental variables.
 For live env : https://api.kyc-pass.com/v1/  
 For staging env : https://stagingapi.kyc-pass.com/v1/
 
-
+For production env make sure you have `API_TOKEN` and `API_ENDPOINT` in env variables.  
 
 ---
 
@@ -25,7 +25,7 @@ Dependency:
 2.Express  
 3.Dotenv  
 
-The folder `./entifyme` can directly copied to your root of existing express project.  
+The folder `./entifyme` can directly copied to your root of existing *express-js* project.  
 ```
 const entifyme = require('./entifyme');
 
@@ -55,3 +55,10 @@ For testing purpose, a dummy webhook handler is created at route `/webhookHandle
 
 You can create custom webhook receiving endpoints or use a single endpoint and hadle it with custom implementation.
 Modify the code at `./webhookHandler.js`  
+
+#### Test locally:  
+As a secure endpoint is required to create webhook and receive incoming payload, you can use https://ngrok.com/ to create tunneling. It'll provide you a secure (https) url which will be accessible form the public internet.  
+
+---
+
+The demo server is hosted at https://be-sandbox-demo.herokuapp.com
