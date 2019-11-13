@@ -15,7 +15,7 @@ entifyme.get('/', (req, res) => {
 entifyme.post('/getToken', async (req, res) => {
   try {
     const resp = await getToken();
-    return res.send(resp);
+    return res.send(resp.data);
   }catch(err) {
     return res.status((err.response && err.response.status || 500)).send((err.response && err.response.data) || "Something went wrong!")
   }
@@ -45,8 +45,9 @@ entifyme.put('/updateWebhook/:webhookId', async (req, res) => {
 entifyme.get('/getWebhookList', async (req, res) => {
   try {
     const resp = await getWebhookList();
-    return res.send(resp);
+    return res.send(resp.data);
   }catch(err) {
+    console.log(err)
     return res.status((err.response && err.response.status || 500)).send((err.response && err.response.data) || "Something went wrong!")
   }
 })
@@ -55,7 +56,7 @@ entifyme.get('/getWebhook/:webhookId', async (req, res) => {
   // input data can be validated
   try {
     const resp = await getWebhook(req.params.webhookId);
-    return res.send(resp);
+    return res.send(resp.data);
   }catch(err) {
     return res.status((err.response && err.response.status || 500)).send((err.response && err.response.data) || "Something went wrong!")
   }
