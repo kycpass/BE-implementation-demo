@@ -13,7 +13,7 @@ In this project we are using `dotenv` package to handle environmental variables.
 For live env : https://api.kyc-pass.com/v1/  
 For staging env : https://stagingapi.kyc-pass.com/v1/
 
-
+For production env make sure you have `API_TOKEN` and `API_ENDPOINT` in env variables.  
 
 ---
 
