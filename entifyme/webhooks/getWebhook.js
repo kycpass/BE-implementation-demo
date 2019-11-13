@@ -1,27 +1,17 @@
 const EFrequest = require('../request');
 
 //GET https://api.kyc-pass.com/v1/webhooks
-const getWebhookList = async ()=>{
-  try{
-    const hooks = await EFrequest({
-      path: "webhooks"
-    });
-    return hooks.data;
-  }catch(err) {    
-    return (err.response && err.response.data) || "Something went wrong!";
-  }
+const getWebhookList = () => {
+  return EFrequest({
+    path: "webhooks"
+  });
 }
 
 // GET https://api.kyc-pass.com/v1/webhooks/{webhookId}
-const getWebhook = async (webhookId)=>{
-  try{
-    const hooks = await EFrequest({
-      path: `webhooks/${webhookId}`,
-    });
-    return hooks.data;
-  }catch(err) {
-    return (err.response && err.response.data) || "Something went wrong!";
-  }
+const getWebhook = (webhookId) => {
+  return EFrequest({
+    path: `webhooks/${webhookId}`,
+  });
 }
 
 module.exports = {
