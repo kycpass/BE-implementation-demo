@@ -1,0 +1,20 @@
+{
+  "name": "entifyme-be-demo",
+  "version": "1.0.0",
+  "description": "Demo to demonstrate the webhook and jwt token generation",
+  "main": "index",
+  "scripts": {
+    "dev": "nodemon -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Entifyme",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
