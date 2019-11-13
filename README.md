@@ -25,7 +25,7 @@ Dependency:
 2.Express  
 3.Dotenv  
 
-The folder `./entifyme` can directly copied to your root of existing express project.  
+The folder `./entifyme` can directly copied to your root of existing *express-js* project.  
 ```
 const entifyme = require('./entifyme');
 
