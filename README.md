@@ -4,7 +4,7 @@ This is a nodejs/express server implementation to demonstrate API/Webhook integr
 ## Installation  
 Before you start make sure that you have requested API Token from support@entifyme.com  
 1. Run `npm install`  
-2. Create a `.env` file in your root directory and configure API_TOKEN and API_ENDPOINT.(Look at `.env.example`)
+2. Create a `.env` file in your root directory and configure `API_TOKEN` and `API_ENDPOINT`.(Look at `.env.example`)
 In this project we are using `dotenv` package to handle environmental variables. [More](https://www.npmjs.com/package/dotenv)
 3. Start the service with `node index.js`  
 
