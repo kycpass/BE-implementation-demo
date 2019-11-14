@@ -59,7 +59,7 @@ You can create custom webhook receiving endpoints or use a single endpoint and h
 Modify the code at `./webhookHandler.js`  
 
 #### Test locally:  
-As a secure endpoint is required to create webhook and receive incoming payload, you can use https://ngrok.com/ to create tunneling. It'll provide you a secure (https) url which will be accessible form the public internet.  
+As a secure endpoint is required to create webhook and receive incoming payload, you can use https://ngrok.com/ to create tunnel. It'll provide you a secure (https) url which will be accessible form the public internet.  
 
 ---
 
