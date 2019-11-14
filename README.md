@@ -29,7 +29,7 @@ The folder `./entifyme` can directly copied to your root of existing *express-js
 ```
 const entifyme = require('./entifyme');
 
-// you can secure your route here.
+// you can implement your own auth layer here.
 app.use('/entifyme', entifyme);
 ```
 
