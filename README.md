@@ -85,4 +85,4 @@ In above code, the `secret` is the token you get at the time of webhook creation
 ---
 
 The demo implementation is hosted at https://fe-sandbox-demo.herokuapp.com  
-Frontend implementation - [Github link](https://github.com/kycpass/FE-integration-demo).  
+Frontend implementation source code - [Github link](https://github.com/kycpass/FE-integration-demo).  
