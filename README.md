@@ -1,7 +1,7 @@
 # BE-implementation-demo
 This is a nodejs/express server implementation to demonstrate API/Webhook integration with Entifyme.  
 Use this [Demo APP](https://fe-sandbox-demo.herokuapp.com) to interact with this backend.  
-![Entify-integration](https://fe-sandbox-demo.herokuapp.com/Entify-integration.png)
+![Entify-integration-1](https://fe-sandbox-demo.herokuapp.com/efy-int.png?v=1.0)
 ## Installation  
 Before you start make sure that you have requested API Token from support@entifyme.com  
 1. Run `npm install`  
