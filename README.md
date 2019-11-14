@@ -63,5 +63,24 @@ As a secure endpoint is required to create webhook and receive incoming payload,
 
 ---
 
+### Check if the incoming payload is valid:  
+All the incoming request will have a token in the header `X-Signature`, you can use this to verify the incoming payload.
+Sample Code: 
+```
+const isValid = ({payload, secret, signature}) => {
+  if(payload.constructor === Object) {
+    payload = JSON.stringify(payload);
+  }
+  if(!Buffer.isBuffer(payload)) {
+    payload = Buffer.from(payload, 'utf8');
+  }
+  const hash = crypto.createHmac('sha256', secret);
+  hash.update(payload);
+  const digest = hash.digest('hex');
+  return digest === signature.toLowerCase();
+};
+```
+In above code, the `secret` is the token you get at the time of webhook creation.  
+
 The demo backend implementation is hosted at https://be-sandbox-demo.herokuapp.com
 The demo frontend implementation is hosted at https://fe-sandbox-demo.herokuapp.com/
