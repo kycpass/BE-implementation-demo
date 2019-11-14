@@ -24,8 +24,14 @@ app.get('/incomingPayload', (req, res) => {
 app.post('/webhookHandler', (req, res) => {
 	// you'll receive the expected payload
 	// following code can be replaced with custom implementation
-	console.log(req.body) // debugging purpose
-	const resp = processWebhook(req.body);
+	const XSig = req.get("X-Signature");
+	// X-Signature can be used to verify that the request is coming from Entify.
+	// https://developers.kyc-pass.com/#webhook-security
+	console.log(req.body, XSig) // debugging purpose
+	const resp = processWebhook({
+		"X-Signature": XSig,
+		payload: req.body
+	});
 	return res.send(resp);
 });
 
