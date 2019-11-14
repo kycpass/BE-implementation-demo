@@ -1,10 +1,10 @@
 const EFrequest = require('./request');
-
+const { REFERRER } = require('./consts');
 const getToken = () => {
   return EFrequest({
     method:"post",
     data: {
-      referrer: "http://localhost"
+      referrer: REFERRER
     },
     path:"sdk-tokens"
   });
