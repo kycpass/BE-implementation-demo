@@ -40,7 +40,7 @@ Once the app is running, the following routes will be avaiable:
 
 | Route  | Method  | Body | Description  |
 |---|---|---|---|
-| `/entifyme/getToken`  | `POST`  |  `{referral:<authorized domain name>}` | Generate a JWT token to use it on client side to initialize the SDK *<br>`/sdk-tokens`   |
+| `/entifyme/getToken`  | `POST`  |  `{referral:<authorized domain name>}` | Generate a JWT token to use it on client side to initialize the SDK <br>`/sdk-tokens`   |
 | `/entifyme/createWebhook`  | `POST`  |  `{url, enabled, eventType}` | Register a webhook<br> Entifyme URL: `/webhooks` |
 | `/entifyme/updateWebhook/:webhookId`  | `PUT`  | `{url, enabled, eventType}` | Update an existing webhook<br> Entifyme URL:`/webhooks/{webhookId}` |
 | `/entifyme/getWebhookList`  | `GET`  |   | Get the list of registered webhooks<br> Entifyme URL:`/webhooks`  |
