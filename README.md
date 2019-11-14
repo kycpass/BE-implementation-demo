@@ -29,7 +29,7 @@ The folder `./entifyme` can directly copied to your root of existing *express-js
 ```
 const entifyme = require('./entifyme');
 
-// you can secure your route here.
+// you can implement your own auth layer here.
 app.use('/entifyme', entifyme);
 ```
 
@@ -40,13 +40,15 @@ Once the app is running, the following routes will be avaiable:
 
 | Route  | Method  | Body | Description  |
 |---|---|---|---|
-| `/entifyme/getToken`  | `POST`  |  `{referral:<authorized domain name>}` | Generate a JWT token to use it on client side to initialize the SDK<br>`/sdk-tokens`   |
+| `/entifyme/getToken`  | `POST`  |  `{referral:<authorized domain name>}` | Generate a JWT token to use it on client side to initialize the SDK *<br>`/sdk-tokens`   |
 | `/entifyme/createWebhook`  | `POST`  |  `{url, enabled, eventType}` | Register a webhook<br> Entifyme URL: `/webhooks` |
 | `/entifyme/updateWebhook/:webhookId`  | `PUT`  | `{url, enabled, eventType}` | Update an existing webhook<br> Entifyme URL:`/webhooks/{webhookId}` |
 | `/entifyme/getWebhookList`  | `GET`  |   | Get the list of registered webhooks<br> Entifyme URL:`/webhooks`  |
 | `/entifyme/getWebhook`  | `GET`  |   | Get detail of a webhook<br> Entifyme URL:`/webhooks/{webhookId}` |
 
-Note: To know more about the request builder check `./entifyme/request.js` .
+Note: 
+1. To know more about the request builder, check `./entifyme/request.js`  
+2. Usage of token is restricted to a specific domain (Your client URL). This is to prevent someone else using your SDK token to make requests. Replace the `REFERRER` with your own client URL in `./entifyme/consts.js`.  
 
 ### Webhook registration and receiving payload:  
 
@@ -61,4 +63,5 @@ As a secure endpoint is required to create webhook and receive incoming payload,
 
 ---
 
-The demo server is hosted at https://be-sandbox-demo.herokuapp.com
+The demo backend implementation is hosted at https://be-sandbox-demo.herokuapp.com
+The demo frontend implementation is hosted at https://fe-sandbox-demo.herokuapp.com/
