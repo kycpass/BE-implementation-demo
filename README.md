@@ -48,7 +48,8 @@ Once the app is running, the following routes will be avaiable:
 
 **Note:**  To know more about the request builder, check `./entifyme/request.js`  
 **Important!!**  
-Usage of token is restricted to a specific domain (Your client URL). This is to prevent someone else using your SDK token to make requests. Replace the `REFERRER` with your own client URL in `./entifyme/consts.js`.  For example, if you want to mount the SDK in www.xyz.com website, generate the token with `{referral: www.xyz.com}`
+Usage of token is restricted to a specific domain (Your client URL). This is to prevent someone else using your SDK token to make requests. Replace the `REFERRER` with your own client URL in `./entifyme/consts.js`.  
+For example, if you want to mount the SDK in www.xyz.com website, generate the token with `{referral: www.xyz.com}`
 
 ### Webhook registration and receiving payload:  
 
