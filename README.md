@@ -1,5 +1,6 @@
 # BE-sandbox
-This is a nodejs/express server implementation to demonstrate API/Webhook integration with Entifyme.
+This is a nodejs/express server implementation to demonstrate API/Webhook integration with Entifyme.  
+Use this [Demo APP](https://fe-sandbox-demo.herokuapp.com) to interact with this backend.  
 
 ## Installation  
 Before you start make sure that you have requested API Token from support@entifyme.com  
@@ -9,9 +10,8 @@ In this project we are using `dotenv` package to handle environmental variables.
 3. Start the service with `node index.js`  
 
 **Note:**  
-`API_ENDPOINT`:
-For live env : https://api.kyc-pass.com/v1/  
-For staging env : https://stagingapi.kyc-pass.com/v1/
+For live env : `API_ENDPOINT`: https://api.kyc-pass.com/v1/  
+For staging env : `API_ENDPOINT`: https://stagingapi.kyc-pass.com/v1/
 
 For production env make sure you have `API_TOKEN` and `API_ENDPOINT` in env variables.  
 
@@ -46,9 +46,9 @@ Once the app is running, the following routes will be avaiable:
 | `/entifyme/getWebhookList`  | `GET`  |   | Get the list of registered webhooks<br> Entifyme URL:`/webhooks`  |
 | `/entifyme/getWebhook`  | `GET`  |   | Get detail of a webhook<br> Entifyme URL:`/webhooks/{webhookId}` |
 
-Note: 
-1. To know more about the request builder, check `./entifyme/request.js`  
-2. Usage of token is restricted to a specific domain (Your client URL). This is to prevent someone else using your SDK token to make requests. Replace the `REFERRER` with your own client URL in `./entifyme/consts.js`.  For example, if you want to mount the SDK in www.xyz.com website, generate the token with `{referral: www.xyz.com}`
+**Note:**  To know more about the request builder, check `./entifyme/request.js`  
+**Important!!**  
+Usage of token is restricted to a specific domain (Your client URL). This is to prevent someone else using your SDK token to make requests. Replace the `REFERRER` with your own client URL in `./entifyme/consts.js`.  For example, if you want to mount the SDK in www.xyz.com website, generate the token with `{referral: www.xyz.com}`
 
 ### Webhook registration and receiving payload:  
 
@@ -82,5 +82,6 @@ const isValid = ({payload, secret, signature}) => {
 ```
 In above code, the `secret` is the token you get at the time of webhook creation.  
 
-The demo backend implementation is hosted at https://be-sandbox-demo.herokuapp.com
-The demo frontend implementation is hosted at https://fe-sandbox-demo.herokuapp.com/
+---
+
+The demo implementation is hosted at https://fe-sandbox-demo.herokuapp.com
